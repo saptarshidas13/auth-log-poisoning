@@ -160,3 +160,10 @@ workforce/edocument); expect it to take on the order of tens of minutes.
 - All pseudo-random number generators used anywhere in this codebase are explicitly
   seeded; no script depends on wall-clock time or external state for its numeric
   results.
+- **Every script listed under "Reproducing the results" has been run end to end**
+  against the exact dataset setup described above. `pipeline_p3_retention.py`,
+  `phase6_dbpm_attack_demo.py`, and `phase7_ablation_group_size.py` reproduced the
+  paper's quoted numbers exactly; `pipeline_p4_certified.py` reproduced zero
+  certificate violations across every dataset, exactly as claimed. The others ran
+  without error and produced results consistent with the paper up to the
+  determinism-fix caveat above.
